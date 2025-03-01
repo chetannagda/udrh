@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #9c8352;
+  --primary-dark: #7a6841;
+  --secondary: #2c3e50;
+  --light: #f8f9fa;
+  --dark: #1a1a1a;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply text-gray-800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.btn-primary {
+  @apply bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-medium py-2 px-6 rounded transition-all duration-300;
+}
+
+.btn-outline {
+  @apply border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white font-medium py-2 px-6 rounded transition-all duration-300;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent;
+}
+
+.card-hover {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.navbar-link {
+  @apply relative text-white hover:text-[var(--primary)] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--primary)] after:transition-all after:duration-300 hover:after:w-full;
+}
+
+.navbar-link.active {
+  @apply text-[var(--primary)] after:w-full;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.room-card {
+  @apply overflow-hidden rounded-lg shadow-lg bg-white transition-all duration-300 hover:shadow-xl;
+}
+
+.room-card img {
+  @apply w-full h-64 object-cover transition-transform duration-500 hover:scale-110;
+}
+
+.amenity-icon {
+  @apply text-[var(--primary)] mr-2;
+}
+
+.footer-link {
+  @apply hover:text-[var(--primary)] transition-colors duration-300;
+}
+
+.scroll-to-top {
+  @apply fixed bottom-6 right-6 bg-[var(--primary)] text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300 hover:bg-[var(--primary-dark)];
+}
+
+.testimonial-card {
+  @apply bg-white p-6 rounded-lg shadow-md;
+}
+
+.testimonial-card:before {
+  content: '"';
+  @apply text-6xl text-[var(--primary)] opacity-20 absolute top-0 left-4;
+}
